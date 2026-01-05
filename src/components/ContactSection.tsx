@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { Github, Linkedin, Instagram, MessageCircle, Mail, ArrowUpRight } from "lucide-react";
+import { useRef, useState } from "react";
+import { Github, Linkedin, Instagram, MessageCircle, Mail, ArrowUpRight, Phone, Copy } from "lucide-react";
 
 const socials = [
   {
@@ -104,6 +104,23 @@ const ContactSection = () => {
               Send an Email
               <ArrowUpRight size={16} />
             </button>
+
+            <div className="mt-4 text-sm">
+              <div className="inline-flex items-center gap-3 text-muted-foreground">
+                <Phone className="w-5 h-5 text-primary" />
+                <a href="tel:9822446744" className="font-medium text-foreground">9822446744</a>
+                <button
+                  type="button"
+                  aria-label="Copy phone"
+                  onClick={() => navigator.clipboard?.writeText('9822446744')}
+                  className="p-2 rounded-md bg-secondary/10 hover:bg-secondary/20 transition-colors"
+                >
+                  <Copy className="w-4 h-4 text-muted-foreground" />
+                </button>
+              </div>
+
+              <EmailCopyRow />
+            </div>
           </div>
 
           {/* Social Links */}
@@ -131,3 +148,34 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
+function EmailCopyRow() {
+  const [copied, setCopied] = useState(false);
+  const email = 'utsavadhr@gmail.com';
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch (e) {
+      // ignore
+    }
+  };
+
+  return (
+    <div className="mt-3 inline-flex items-center gap-3 text-muted-foreground">
+      <Mail className="w-5 h-5 text-primary" />
+      <a href="mailto:utsavadhr@gmail.com" className="font-medium text-foreground">{email}</a>
+      <button
+        type="button"
+        aria-label="Copy email"
+        onClick={handleCopy}
+        className="p-2 rounded-md bg-secondary/10 hover:bg-secondary/20 transition-colors"
+      >
+        <Copy className="w-4 h-4 text-muted-foreground" />
+      </button>
+      <span className="ml-2 text-sm text-primary" aria-hidden>{copied ? 'Copied!' : ''}</span>
+    </div>
+  );
+}
