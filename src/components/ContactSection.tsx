@@ -7,25 +7,25 @@ const socials = [
   {
     name: "GitHub",
     icon: Github,
-    href: "https://github.com",
+    href: "https://github.com/Brook07",
     color: "hover:text-white hover:bg-[#333]",
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/utsav-adhikari-9a56b4243/",
     color: "hover:text-white hover:bg-[#0077B5]",
   },
   {
     name: "Instagram",
     icon: Instagram,
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/adk_utsav/",
     color: "hover:text-white hover:bg-gradient-to-br hover:from-[#833AB4] hover:via-[#FD1D1D] hover:to-[#F77737]",
   },
   {
     name: "Discord",
     icon: MessageCircle,
-    href: "#",
+    href: "https://discord.com/users/utsav6190",
     color: "hover:text-white hover:bg-[#5865F2]",
   },
 ];

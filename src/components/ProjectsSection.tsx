@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github, Server, Users, Layers } from "lucide-react";
+import { ExternalLink, Github, Server, Users, Layers, Gamepad2 } from "lucide-react";
 
 const projects = [
   {
@@ -10,33 +10,45 @@ const projects = [
       "A full-stack ride-sharing platform with real-time tracking, driver matching algorithms, and seamless payment integration. Built with focus on scalable backend architecture.",
     tags: ["Node.js", "React", "MongoDB", "Socket.io", "REST API"],
     icon: Server,
-    featured: true,
-    links: {
-      github: "#",
-      demo: null,
-    },
-  },
-  {
-    title: "Social Networking Platform",
-    description:
-      "A feature-rich social media platform with user authentication, real-time messaging, post feeds, and notification systems. Emphasis on database design and API efficiency.",
-    tags: ["React", "Express", "MySQL", "JWT", "WebSocket"],
-    icon: Users,
-    featured: true,
-    links: {
-      github: "#",
-      demo: null,
-    },
-  },
-  {
-    title: "Semester Projects",
-    description:
-      "Collection of academic projects exploring various domains including data structures, algorithms, database management systems, and software engineering principles.",
-    tags: ["C++", "Python", "MySQL", "Data Structures"],
-    icon: Layers,
     featured: false,
     links: {
       github: "#",
+      demo: null,
+    },
+  },
+  {
+    title: "SonicChat",
+    description:
+      "A full-stack real-time chat application with authentication, instant messaging, file uploads, notifications, and more. Built with Node.js, Express, MongoDB, Socket.io, React, and Tailwind CSS.",
+    tags: ["Node.js", "React", "MongoDB", "Socket.io", "Express"],
+    icon: Server,
+    featured: false,
+    links: {
+      github: "https://github.com/Brook07/SonicChat-Web-Application",
+      demo: null,
+    },
+  },
+  {
+    title: "Typescape",
+    description:
+      "A 2D dungeon-themed typing challenge game with 4 progressive difficulty levels. Combines skill development and entertainment to improve typing speed and accuracy through interactive gameplay built with Godot Engine.",
+    tags: ["Godot", "Game Development", "2D", "GDScript"],
+    icon: Gamepad2,
+    featured: false,
+    links: {
+      github: "https://github.com/Brook07/Typescape",
+      demo: null,
+    },
+  },
+  {
+    title: "CONNECTIFY",
+    description:
+      "Social Networking Mobile App based on common interests. Connect with people who share your passions, hobbies, and interests through an intuitive mobile platform.",
+    tags: ["React Native", "Node.js", "MongoDB", "Mobile Development"],
+    icon: Users,
+    featured: false,
+    links: {
+      github: "https://github.com/Brook07/CONNECTIFY",
       demo: null,
     },
   },
@@ -63,16 +75,14 @@ const ProjectsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className={`project-card ${
-                project.featured ? "lg:first:col-span-2" : ""
-              }`}
+              className="project-card"
             >
               <div className="p-6 md:p-8">
                 {/* Header */}
@@ -146,7 +156,7 @@ const ProjectsSection = () => {
           className="mt-12 text-center"
         >
           <a
-            href="https://github.com"
+            href="https://github.com/Brook07"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline inline-flex items-center gap-2"

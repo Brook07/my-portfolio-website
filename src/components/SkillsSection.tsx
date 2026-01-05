@@ -118,7 +118,7 @@ const SkillsSection = () => {
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-card border border-border/50">
             <span className="text-primary">💡</span>
             <span className="text-muted-foreground text-sm">
-              Always learning, always growing — technology never stops evolving
+              Always learning, always growing, technology never stops evolving
             </span>
           </div>
         </motion.div>

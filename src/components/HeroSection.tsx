@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { ArrowDown, Code2, Boxes, Server } from "lucide-react";
 
 const roles = [
-  "Full-Stack Developer",
+  "Aspiring Full-Stack Developer",
   "System Design Enthusiast",
   "Backend-Focused Builder",
 ];
@@ -42,33 +42,31 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-24"
     >
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Greeting */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-6"
-          >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Available for opportunities
-            </span>
-          </motion.div>
+          <motion.h1
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.1 }}
+                      className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
+                    >
+                      <span className="text-foreground">Hi </span>{" "}
+                      <span className="text-gradient">I 'm</span>
+                    </motion.h1>
 
           {/* Name */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
-          >
-            <span className="text-foreground">Utsav</span>{" "}
-            <span className="text-gradient">Adhikari</span>
-          </motion.h1>
+                    <motion.h1
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.1 }}
+                      className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
+                    >
+                      <span className="text-foreground">Utsav</span>{" "}
+                      <span className="text-gradient">Adhikari</span>
+                    </motion.h1>
 
           {/* Animated Role */}
           <motion.div
@@ -115,7 +113,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="grid grid-cols-3 gap-4 max-w-md mx-auto"
+            className="grid grid-cols-3 gap-4 max-w-md mx-auto mb-20"
           >
             {[
               { icon: Code2, label: "Full-Stack" },
@@ -133,24 +131,6 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
-      >
-        <motion.a
-          href="#about"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-        >
-          <span className="text-xs">Scroll Down</span>
-          <ArrowDown size={20} />
-        </motion.a>
-      </motion.div>
     </section>
   );
 };
