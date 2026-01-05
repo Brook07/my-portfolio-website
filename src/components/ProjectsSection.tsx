@@ -5,19 +5,19 @@ import { ExternalLink, Github, Server, Users, Layers, Gamepad2 } from "lucide-re
 
 const projects = [
   {
-    title: "Ride-Sharing Application",
+    title: "RideShareX",
     description:
-      "A full-stack ride-sharing platform with real-time tracking, driver matching algorithms, and seamless payment integration. Built with focus on scalable backend architecture.",
+      "🚗 RideShareX - Peer-to-Peer Vehicle Rental Platform(5th Sem Project)",
     tags: ["Node.js", "React", "MongoDB", "Socket.io", "REST API"],
     icon: Server,
     featured: false,
     links: {
-      github: "#",
+      github: "https://github.com/Brook07/RideShareX",
       demo: null,
     },
   },
   {
-    title: "SonicChat",
+    title: "SonicChat-Web-Application",
     description:
       "A full-stack real-time chat application with authentication, instant messaging, file uploads, notifications, and more. Built with Node.js, Express, MongoDB, Socket.io, React, and Tailwind CSS.",
     tags: ["Node.js", "React", "MongoDB", "Socket.io", "Express"],
