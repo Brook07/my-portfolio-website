@@ -100,10 +100,16 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
-            <a href="#projects" className="btn-primary">
+            <a
+              href="#projects"
+              className="btn-primary"
+            >
               View Projects
             </a>
-            <a href="#contact" className="btn-outline">
+            <a
+              href="#contact"
+              className="btn-outline"
+            >
               Contact / Connect
             </a>
           </motion.div>
