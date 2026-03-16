@@ -34,24 +34,14 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#home" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center glow-effect-sm">
-              <span className="text-primary font-bold text-lg">U</span>
-            </div>
-            <span className="text-foreground font-semibold hidden sm:block">
-              Utsav
-            </span>
-          </a>
-
+        <div className="relative flex items-center justify-end md:justify-center">
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="nav-link text-sm font-medium"
+                className="nav-link text-base font-medium"
               >
                 {link.label}
               </a>
@@ -61,7 +51,7 @@ const Navbar = () => {
           {/* CTA Button */}
           <a
             href="#contact"
-            className="hidden md:block btn-primary text-sm"
+            className="hidden md:block btn-primary text-sm absolute right-0 top-1/2 -translate-y-1/2"
           >
             Let's Connect
           </a>
@@ -89,7 +79,7 @@ const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileOpen(false)}
-                  className="nav-link text-sm font-medium py-2"
+                  className="nav-link text-base font-medium py-2"
                 >
                   {link.label}
                 </a>
