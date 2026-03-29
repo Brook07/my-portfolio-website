@@ -40,7 +40,7 @@ const FloatingShapes = () => {
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {/* Primary glow object */}
       <motion.div
-        className="absolute top-[10%] right-[7%] w-[30rem] h-[30rem] rounded-full opacity-30 blur-2xl"
+        className="absolute top-[8%] -left-24 lg:left-[4%] w-[30rem] h-[30rem] rounded-full opacity-30 blur-2xl"
         style={{
           background:
             "radial-gradient(circle at 30% 30%, hsl(187 100% 72% / 0.52) 0%, hsl(190 95% 52% / 0.28) 42%, transparent 72%)",
@@ -59,7 +59,7 @@ const FloatingShapes = () => {
 
       {/* Inner lens for depth */}
       <motion.div
-        className="absolute top-[16%] right-[15%] w-56 h-56 rounded-full opacity-45"
+        className="absolute top-[14%] left-[2%] lg:left-[11%] w-56 h-56 rounded-full opacity-45"
         style={{
           background:
             "radial-gradient(circle at 35% 30%, hsl(0 0% 100% / 0.7) 0%, hsl(187 100% 72% / 0.34) 26%, transparent 70%)",
@@ -78,7 +78,7 @@ const FloatingShapes = () => {
 
       {/* Orbiting rings */}
       <motion.div
-        className="absolute top-[15%] right-[12%] w-64 h-64 rounded-full border border-primary/25"
+        className="absolute top-[13%] left-[1%] lg:left-[9%] w-64 h-64 rounded-full border border-primary/25"
         animate={{
           rotate: [0, 360],
           scale: [0.98, 1.02, 0.98],
@@ -91,7 +91,7 @@ const FloatingShapes = () => {
       />
 
       <motion.div
-        className="absolute top-[13%] right-[9%] w-72 h-72 rounded-full border border-cyan-300/15"
+        className="absolute top-[11%] -left-2 lg:left-[7%] w-72 h-72 rounded-full border border-cyan-300/15"
         animate={{ rotate: [360, 0] }}
         transition={{
           duration: 18,
