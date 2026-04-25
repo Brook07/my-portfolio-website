@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Heart, ArrowUp } from "lucide-react";
+import Webring from "./Webring";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -9,7 +10,10 @@ const Footer = () => {
   return (
     <footer className="py-12 border-t border-border/50 relative">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col gap-8">
+          <Webring />
+
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
          
 
           {/* Back to Top */}
@@ -25,6 +29,7 @@ const Footer = () => {
               <ArrowUp size={14} />
             </span>
           </motion.button>
+          </div>
         </div>
       </div>
     </footer>
